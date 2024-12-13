@@ -1,0 +1,12 @@
+C:\Proekti\TMS_Solution\TMS.Services\bin\Debug\net8.0\TMS.Services.deps.json
+C:\Proekti\TMS_Solution\TMS.Services\bin\Debug\net8.0\TMS.Services.dll
+C:\Proekti\TMS_Solution\TMS.Services\bin\Debug\net8.0\TMS.Services.pdb
+C:\Proekti\TMS_Solution\TMS.Services\obj\Debug\net8.0\TMS.Services.csproj.AssemblyReference.cache
+C:\Proekti\TMS_Solution\TMS.Services\obj\Debug\net8.0\TMS.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Proekti\TMS_Solution\TMS.Services\obj\Debug\net8.0\TMS.Services.AssemblyInfoInputs.cache
+C:\Proekti\TMS_Solution\TMS.Services\obj\Debug\net8.0\TMS.Services.AssemblyInfo.cs
+C:\Proekti\TMS_Solution\TMS.Services\obj\Debug\net8.0\TMS.Services.csproj.CoreCompileInputs.cache
+C:\Proekti\TMS_Solution\TMS.Services\obj\Debug\net8.0\TMS.Services.dll
+C:\Proekti\TMS_Solution\TMS.Services\obj\Debug\net8.0\refint\TMS.Services.dll
+C:\Proekti\TMS_Solution\TMS.Services\obj\Debug\net8.0\TMS.Services.pdb
+C:\Proekti\TMS_Solution\TMS.Services\obj\Debug\net8.0\ref\TMS.Services.dll

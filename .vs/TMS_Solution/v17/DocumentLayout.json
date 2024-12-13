@@ -1,0 +1,270 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Proekti\\TMS_Solution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6DEED135-A1D4-415E-85F6-5D5CBB14FB72}|TMS.API\\TMS.API.csproj|c:\\proekti\\tms_solution\\tms.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6DEED135-A1D4-415E-85F6-5D5CBB14FB72}|TMS.API\\TMS.API.csproj|solutionrelative:tms.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DEED135-A1D4-415E-85F6-5D5CBB14FB72}|TMS.API\\TMS.API.csproj|c:\\proekti\\tms_solution\\tms.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6DEED135-A1D4-415E-85F6-5D5CBB14FB72}|TMS.API\\TMS.API.csproj|solutionrelative:tms.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DEED135-A1D4-415E-85F6-5D5CBB14FB72}|TMS.API\\TMS.API.csproj|c:\\proekti\\tms_solution\\tms.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6DEED135-A1D4-415E-85F6-5D5CBB14FB72}|TMS.API\\TMS.API.csproj|solutionrelative:tms.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31CC170B-3391-4178-A481-FBC4E8220814}|TMS.Data\\TMS.Data.csproj|c:\\proekti\\tms_solution\\tms.data\\models\\taskitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31CC170B-3391-4178-A481-FBC4E8220814}|TMS.Data\\TMS.Data.csproj|solutionrelative:tms.data\\models\\taskitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DEED135-A1D4-415E-85F6-5D5CBB14FB72}|TMS.API\\TMS.API.csproj|c:\\proekti\\tms_solution\\tms.api\\tms.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{6DEED135-A1D4-415E-85F6-5D5CBB14FB72}|TMS.API\\TMS.API.csproj|solutionrelative:tms.api\\tms.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4FD71C2-902E-44D1-A424-F0FAD9ADF774}|TMS.Repositories\\TMS.Repositories.csproj|c:\\proekti\\tms_solution\\tms.repositories\\repositories\\taskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4FD71C2-902E-44D1-A424-F0FAD9ADF774}|TMS.Repositories\\TMS.Repositories.csproj|solutionrelative:tms.repositories\\repositories\\taskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DEED135-A1D4-415E-85F6-5D5CBB14FB72}|TMS.API\\TMS.API.csproj|c:\\proekti\\tms_solution\\tms.api\\controllers\\taskitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6DEED135-A1D4-415E-85F6-5D5CBB14FB72}|TMS.API\\TMS.API.csproj|solutionrelative:tms.api\\controllers\\taskitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31CC170B-3391-4178-A481-FBC4E8220814}|TMS.Data\\TMS.Data.csproj|c:\\proekti\\tms_solution\\tms.data\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31CC170B-3391-4178-A481-FBC4E8220814}|TMS.Data\\TMS.Data.csproj|solutionrelative:tms.data\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DEED135-A1D4-415E-85F6-5D5CBB14FB72}|TMS.API\\TMS.API.csproj|c:\\proekti\\tms_solution\\tms.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6DEED135-A1D4-415E-85F6-5D5CBB14FB72}|TMS.API\\TMS.API.csproj|solutionrelative:tms.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6ADDAD7E-8FA7-43D0-97E8-76D1543D21AF}|TMS.Services\\TMS.Services.csproj|c:\\proekti\\tms_solution\\tms.services\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6ADDAD7E-8FA7-43D0-97E8-76D1543D21AF}|TMS.Services\\TMS.Services.csproj|solutionrelative:tms.services\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6ADDAD7E-8FA7-43D0-97E8-76D1543D21AF}|TMS.Services\\TMS.Services.csproj|c:\\proekti\\tms_solution\\tms.services\\interfaces\\ijwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6ADDAD7E-8FA7-43D0-97E8-76D1543D21AF}|TMS.Services\\TMS.Services.csproj|solutionrelative:tms.services\\interfaces\\ijwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4FD71C2-902E-44D1-A424-F0FAD9ADF774}|TMS.Repositories\\TMS.Repositories.csproj|c:\\proekti\\tms_solution\\tms.repositories\\interfaces\\itaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4FD71C2-902E-44D1-A424-F0FAD9ADF774}|TMS.Repositories\\TMS.Repositories.csproj|solutionrelative:tms.repositories\\interfaces\\itaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31CC170B-3391-4178-A481-FBC4E8220814}|TMS.Data\\TMS.Data.csproj|c:\\proekti\\tms_solution\\tms.data\\contextsettings\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31CC170B-3391-4178-A481-FBC4E8220814}|TMS.Data\\TMS.Data.csproj|solutionrelative:tms.data\\contextsettings\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31CC170B-3391-4178-A481-FBC4E8220814}|TMS.Data\\TMS.Data.csproj|c:\\proekti\\tms_solution\\tms.data\\tms.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{31CC170B-3391-4178-A481-FBC4E8220814}|TMS.Data\\TMS.Data.csproj|solutionrelative:tms.data\\tms.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31CC170B-3391-4178-A481-FBC4E8220814}|TMS.Data\\TMS.Data.csproj|c:\\proekti\\tms_solution\\tms.data\\migrations\\20241212140539_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31CC170B-3391-4178-A481-FBC4E8220814}|TMS.Data\\TMS.Data.csproj|solutionrelative:tms.data\\migrations\\20241212140539_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Proekti\\TMS_Solution\\TMS.API\\Program.cs",
+              "RelativeDocumentMoniker": "TMS.API\\Program.cs",
+              "ToolTip": "C:\\Proekti\\TMS_Solution\\TMS.API\\Program.cs",
+              "RelativeToolTip": "TMS.API\\Program.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAUwC0AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T13:55:57.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Proekti\\TMS_Solution\\TMS.API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "TMS.API\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Proekti\\TMS_Solution\\TMS.API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "TMS.API\\Properties\\launchSettings.json",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAABoAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-12T15:55:14.823Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TaskItem.cs",
+              "DocumentMoniker": "C:\\Proekti\\TMS_Solution\\TMS.Data\\Models\\TaskItem.cs",
+              "RelativeDocumentMoniker": "TMS.Data\\Models\\TaskItem.cs",
+              "ToolTip": "C:\\Proekti\\TMS_Solution\\TMS.Data\\Models\\TaskItem.cs",
+              "RelativeToolTip": "TMS.Data\\Models\\TaskItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T13:51:51.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "JwtService.cs",
+              "DocumentMoniker": "C:\\Proekti\\TMS_Solution\\TMS.Services\\Services\\JwtService.cs",
+              "RelativeDocumentMoniker": "TMS.Services\\Services\\JwtService.cs",
+              "ToolTip": "C:\\Proekti\\TMS_Solution\\TMS.Services\\Services\\JwtService.cs",
+              "RelativeToolTip": "TMS.Services\\Services\\JwtService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T16:21:43.304Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Proekti\\TMS_Solution\\TMS.API\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "TMS.API\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Proekti\\TMS_Solution\\TMS.API\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "TMS.API\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T16:27:27.85Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TaskItemController.cs",
+              "DocumentMoniker": "C:\\Proekti\\TMS_Solution\\TMS.API\\Controllers\\TaskItemController.cs",
+              "RelativeDocumentMoniker": "TMS.API\\Controllers\\TaskItemController.cs",
+              "ToolTip": "C:\\Proekti\\TMS_Solution\\TMS.API\\Controllers\\TaskItemController.cs",
+              "RelativeToolTip": "TMS.API\\Controllers\\TaskItemController.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAqwEIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T14:15:29.896Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TMS.API.csproj",
+              "DocumentMoniker": "C:\\Proekti\\TMS_Solution\\TMS.API\\TMS.API.csproj",
+              "RelativeDocumentMoniker": "TMS.API\\TMS.API.csproj",
+              "ToolTip": "C:\\Proekti\\TMS_Solution\\TMS.API\\TMS.API.csproj",
+              "RelativeToolTip": "TMS.API\\TMS.API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-12T14:05:57.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginModel.cs",
+              "DocumentMoniker": "C:\\Proekti\\TMS_Solution\\TMS.Data\\Models\\LoginModel.cs",
+              "RelativeDocumentMoniker": "TMS.Data\\Models\\LoginModel.cs",
+              "ToolTip": "C:\\Proekti\\TMS_Solution\\TMS.Data\\Models\\LoginModel.cs",
+              "RelativeToolTip": "TMS.Data\\Models\\LoginModel.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAIwAsAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T16:28:48.314Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TaskRepository.cs",
+              "DocumentMoniker": "C:\\Proekti\\TMS_Solution\\TMS.Repositories\\Repositories\\TaskRepository.cs",
+              "RelativeDocumentMoniker": "TMS.Repositories\\Repositories\\TaskRepository.cs",
+              "ToolTip": "C:\\Proekti\\TMS_Solution\\TMS.Repositories\\Repositories\\TaskRepository.cs",
+              "RelativeToolTip": "TMS.Repositories\\Repositories\\TaskRepository.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAywB8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T15:20:55.621Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IJwtService.cs",
+              "DocumentMoniker": "C:\\Proekti\\TMS_Solution\\TMS.Services\\Interfaces\\IJwtService.cs",
+              "RelativeDocumentMoniker": "TMS.Services\\Interfaces\\IJwtService.cs",
+              "ToolTip": "C:\\Proekti\\TMS_Solution\\TMS.Services\\Interfaces\\IJwtService.cs",
+              "RelativeToolTip": "TMS.Services\\Interfaces\\IJwtService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T16:21:08.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Proekti\\TMS_Solution\\TMS.API\\appsettings.json",
+              "RelativeDocumentMoniker": "TMS.API\\appsettings.json",
+              "ToolTip": "C:\\Proekti\\TMS_Solution\\TMS.API\\appsettings.json",
+              "RelativeToolTip": "TMS.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-12T13:56:06.569Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ITaskRepository.cs",
+              "DocumentMoniker": "C:\\Proekti\\TMS_Solution\\TMS.Repositories\\Interfaces\\ITaskRepository.cs",
+              "RelativeDocumentMoniker": "TMS.Repositories\\Interfaces\\ITaskRepository.cs",
+              "ToolTip": "C:\\Proekti\\TMS_Solution\\TMS.Repositories\\Interfaces\\ITaskRepository.cs",
+              "RelativeToolTip": "TMS.Repositories\\Interfaces\\ITaskRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T15:20:20.519Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "20241212140539_InitialMigration.cs",
+              "DocumentMoniker": "C:\\Proekti\\TMS_Solution\\TMS.Data\\Migrations\\20241212140539_InitialMigration.cs",
+              "RelativeDocumentMoniker": "TMS.Data\\Migrations\\20241212140539_InitialMigration.cs",
+              "ToolTip": "C:\\Proekti\\TMS_Solution\\TMS.Data\\Migrations\\20241212140539_InitialMigration.cs",
+              "RelativeToolTip": "TMS.Data\\Migrations\\20241212140539_InitialMigration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T14:05:39.297Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TMS.Data.csproj",
+              "DocumentMoniker": "C:\\Proekti\\TMS_Solution\\TMS.Data\\TMS.Data.csproj",
+              "RelativeDocumentMoniker": "TMS.Data\\TMS.Data.csproj",
+              "ToolTip": "C:\\Proekti\\TMS_Solution\\TMS.Data\\TMS.Data.csproj",
+              "RelativeToolTip": "TMS.Data\\TMS.Data.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-12T13:57:21.258Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "C:\\Proekti\\TMS_Solution\\TMS.Data\\ContextSettings\\DataContext.cs",
+              "RelativeDocumentMoniker": "TMS.Data\\ContextSettings\\DataContext.cs",
+              "ToolTip": "C:\\Proekti\\TMS_Solution\\TMS.Data\\ContextSettings\\DataContext.cs",
+              "RelativeToolTip": "TMS.Data\\ContextSettings\\DataContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T13:53:30.008Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
