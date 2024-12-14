@@ -1,9 +1,12 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using TMS.Data.ContextSettings;
+using TMS.Data.Helper;
 using TMS.Data.Models;
 using TMS.Repositories.Interfaces;
 
@@ -18,10 +21,21 @@ namespace TMS.Repositories.Repositories
             _context = context;
         }
 
-        public IEnumerable<TaskItem> GetAllTasks()
-        {
-            return _context.TaskItems.ToList();
+        public PaginatedList<TaskItem> GetAllTasks(int pageIndex, int pageSize,string search = "")
+        {           
+                var taskitems = _context.TaskItems
+                    .Where(t => EF.Functions.Like(t.Title, $"%{search}%"))
+                    .OrderBy(t =>  t.Id)
+                    .Skip((pageIndex - 1) * pageSize)
+                    .Take(pageSize)
+                    .ToList();
+
+                var count =  _context.TaskItems.Count();
+                var totalPages = (int)Math.Ceiling(count / (double)pageSize);
+
+                return new PaginatedList<TaskItem>(taskitems, pageIndex, totalPages);          
         }
+
 
         public TaskItem GetTaskById(int id)
         {

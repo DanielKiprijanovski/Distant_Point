@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 using TMS.Data.Helper;
 using TMS.Data.Models;
 
-namespace TMS.Repositories.Interfaces
+namespace TMS.Services.Interfaces
 {
-    public interface ITaskRepository
+    public interface ITaskService
     {
         PaginatedList<TaskItem> GetAllTasks(int pageIndex, int pageSize, string search);
         TaskItem GetTaskById(int id);
-        void AddTask(TaskItem taskItem);
-        void UpdateTask(TaskItem taskItem);
+        void CreateTask(TaskItem task);
+        void UpdateTask(TaskItem task);
         void DeleteTask(int id);
         bool TaskExists(int id);
     }
+
 
 }

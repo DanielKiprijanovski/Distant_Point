@@ -11,4 +11,9 @@
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TMS.Data\TMS.Data.csproj" />
+    <ProjectReference Include="..\TMS.Repositories\TMS.Repositories.csproj" />
+  </ItemGroup>
+
 </Project>

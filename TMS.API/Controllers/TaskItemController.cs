@@ -7,33 +7,37 @@ using System.Linq;
 using System.Threading.Tasks;
 using TMS.Data;
 using TMS.Data.ContextSettings;
+using TMS.Data.Helper;
 using TMS.Data.Models;
-using TMS.Repositories.Interfaces;  
+using TMS.Repositories.Interfaces;
+using TMS.Services.Interfaces;
 
 namespace TMS.API.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     [Authorize]
     public class TaskItemsController : ControllerBase
     {
-        private readonly ITaskRepository _taskRepository;
+        private readonly ITaskService _taskService;
 
-        public TaskItemsController(ITaskRepository taskRepository)
+        public TaskItemsController(ITaskService taskService)
         {
-            _taskRepository = taskRepository;
+            _taskService = taskService;
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<TaskItem>> GetTaskItems()
+        public ActionResult<PaginatedList<TaskItem>> GetTaskItems([FromQuery] int pageIndex = 1, [FromQuery] int pageSize = 10,[FromQuery] string search = "")
         {
-            return Ok(_taskRepository.GetAllTasks());
+            var taskItems = _taskService.GetAllTasks(pageIndex, pageSize, search);
+            return Ok(taskItems);
         }
+
 
         [HttpGet("{id}")]
         public ActionResult<TaskItem> GetTaskItem(int id)
         {
-            var taskItem = _taskRepository.GetTaskById(id);
+            var taskItem = _taskService.GetTaskById(id);
             if (taskItem == null)
             {
                 return NotFound();
@@ -44,15 +48,15 @@ namespace TMS.API.Controllers
         [HttpPost]
         public IActionResult PostTaskItem(TaskItem taskItem)
         {
-            if (string.IsNullOrEmpty(taskItem.Title))
+            try
             {
-                return BadRequest("Title is required.");
+                _taskService.CreateTask(taskItem);
+                return CreatedAtAction(nameof(GetTaskItem), new { id = taskItem.Id }, taskItem);
             }
-
-            taskItem.CreatedDate = DateTime.UtcNow;
-            _taskRepository.AddTask(taskItem);
-
-            return CreatedAtAction(nameof(GetTaskItem), new { id = taskItem.Id }, taskItem);
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpPut("{id}")]
@@ -60,32 +64,35 @@ namespace TMS.API.Controllers
         {
             if (id != taskItem.Id)
             {
-                return BadRequest();
+                return BadRequest("Task ID mismatch.");
             }
 
-            if (!_taskRepository.TaskExists(id))
+            try
             {
-                return NotFound();
+                _taskService.UpdateTask(taskItem);
+                return NoContent();
             }
-
-            _taskRepository.UpdateTask(taskItem);
-
-            return NoContent();
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
 
         [HttpDelete("{id}")]
         public IActionResult DeleteTaskItem(int id)
         {
-            if (!_taskRepository.TaskExists(id))
+            try
             {
-                return NotFound();
+                _taskService.DeleteTask(id);
+                return NoContent();
             }
-
-            _taskRepository.DeleteTask(id);
-
-            return NoContent();
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
     }
+
 
 }
 

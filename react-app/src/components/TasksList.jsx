@@ -4,11 +4,33 @@ import { Navigate } from "react-router-dom";
 import AddTask from "./AddTask.jsx";
 
 const TasksList = () => {
-    const [tasks, setTasks] = useState([]);
+    const [tasks, setTasks] = useState({
+        items: [],
+        pageIndex: 0,
+        totalPages: 0,
+        hasNextPage: false,
+        hasPreviousPage: false,
+    });
+
+    const [pageIndex, setPageIndex] = useState(1);
+    const [pageSize, setPageSize] = useState(5);
+    const [search, setSearch] = useState("");
+
     const [reload, setReload] = useState(true);
     const [edit, setEdit] = useState(false);
     const [editObject, setEditObject] = useState(null);
     const [isOpen, setIsOpen] = useState(false)
+
+    function loadPage(newPageIndex) {
+        setPageIndex(newPageIndex);
+        setReload(true);
+    }
+
+    function handleSearch(value) {
+        setSearch(value ? value : '');
+        setPageIndex(1);
+        setReload(true);
+    }
 
     useEffect(() => {
         if (reload) {
@@ -20,6 +42,11 @@ const TasksList = () => {
                     try {
                         const response = await Axios.get("https://localhost:7256/api/taskitems", {
                             headers: { Authorization: `Bearer ${token}` },
+                            params: {
+                                search,
+                                pageIndex: pageIndex.toString(),
+                                pageSize: pageSize.toString(),
+                            }
                         });
                         setReload(false);
                         setTasks(response.data);
@@ -30,7 +57,7 @@ const TasksList = () => {
             };
             void getItems();
         }
-    }, [reload]);
+    }, [reload, pageIndex, pageSize, search]);
 
     const handleChangeStatus = async (id, task) => {
         const token = localStorage.getItem("token");
@@ -82,6 +109,7 @@ const TasksList = () => {
             );
 
             setReload(true);
+            setPageIndex(1);
         } catch (error) {
             console.error("Error deleting task:", error);
         }
@@ -112,9 +140,9 @@ const TasksList = () => {
     return (
         <>
         <div style={{ display: "flex", gap: "20px" }}>
-            {tasks.length > 0 ? (
-                            <>{
-                tasks.map((item, index) => (
+            <>
+                {tasks.items.length > 0 ?
+                (<>{tasks.items.map((item, index) => (
                     <div
                         key={index}
                         style={{
@@ -209,18 +237,7 @@ const TasksList = () => {
                              </div>
                         )}
                     </div>
-                ))}
-                <div        style={{ padding: "5px",
-                                     height:"20px",
-                                     border: "0.5 solid grey",
-                                     borderRadius: "5px",
-                                     color:"blue",
-                                     backgroundColor:"brown"}}                 onClick={()=>setIsOpen(true)}
-                >
-                      {" ADD TASK"}
-                       </div>
-                       </>
-            ) : (
+                ))}</>) : (
                     <div
                         style={{
                             display: "table-cell",
@@ -232,7 +249,34 @@ const TasksList = () => {
                     >
                         No Tasks found. Add new item
                     </div>
-            )}
+                )}
+                <div        style={{ padding: "5px",
+                                     height:"20px",
+                                     border: "0.5 solid grey",
+                                     borderRadius: "5px",
+                                     color:"blue",
+                                     backgroundColor:"brown"}}                 onClick={()=>setIsOpen(true)}
+                >
+                      {" ADD TASK"}
+                       </div>
+                       <button
+                        onClick={() => loadPage(pageIndex - 1)}
+                        disabled={!tasks.hasPreviousPage}
+                       >
+                        Previous page
+                       </button>
+                       <button
+                        onClick={() => loadPage(pageIndex + 1)}
+                        disabled={!tasks.hasNextPage}
+                       >
+                        Next page
+                       </button>
+                       <input
+                       onChange={e => handleSearch(e.target.value)}
+                       description="Search"
+                       ></input>
+                       </>
+            
          
         </div>
        
