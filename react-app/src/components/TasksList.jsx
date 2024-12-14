@@ -19,7 +19,7 @@ const TasksList = () => {
     const [reload, setReload] = useState(true);
     const [edit, setEdit] = useState(false);
     const [editObject, setEditObject] = useState(null);
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(false);
 
     function loadPage(newPageIndex) {
         setPageIndex(newPageIndex);
@@ -98,7 +98,7 @@ const TasksList = () => {
         }
     };
 
-    const handleDelete =async(id) =>{
+    const handleDelete = async (id) => {
         const token = localStorage.getItem("token");
         try {
             await Axios.delete(
@@ -115,8 +115,8 @@ const TasksList = () => {
         }
     }
 
-    const handleAddItem =async(item)=>{
-        if(!item){
+    const handleAddItem = async (item) => {
+        if (!item) {
             return console.error("cannot create item")
         }
         const token = localStorage.getItem("token");
@@ -135,152 +135,214 @@ const TasksList = () => {
         }
     }
 
-
- 
     return (
         <>
-        <div style={{ display: "flex", gap: "20px" }}>
-            <>
-                {tasks.items.length > 0 ?
-                (<>{tasks.items.map((item, index) => (
-                    <div
-                        key={index}
+            <div style={{ padding: "20px", display: "flex", flexDirection: "column", alignItems: "center" }}>
+                {/* Search bar */}
+                <div style={{ marginBottom: "20px", width: "100%", maxWidth: "400px" }}>
+                    <input
+                        type="text"
+                        value={search}
+                        onChange={e => handleSearch(e.target.value)}
+                        placeholder="Search tasks..."
                         style={{
-                            width: "20vw",
-                            height: "30vh",
-                            border: "0.5px solid grey",
-                            backgroundColor: 'lightBlue',
-                            borderRadius: "25px",
+                            width: "100%",
+                            padding: "10px",
+                            fontSize: "1rem",
+                            borderRadius: "10px",
+                            border: "1px solid #ccc",
+                            outline: "none",
+                            marginBottom: "20px",
                         }}
-                    >
-                        <div
-                            style={{ textAlign: 'center', fontSize: "2rem" }}
-                            onDoubleClick={() => {
-                                setEdit(true);
-                                setEditObject(item);
-                            }}
-                        >
-                            {edit && editObject?.id === item.id ? (
-                                <input
-                                    type="text"
-                                    value={editObject.title}
-                                    name="title"
-                                    onChange={(e) => handleInput(e.target.value, e.target.name)}
-                                />
-                            ) : (
-                                item.title
-                            )}
-                        </div>
-                        <div
-                            style={{ textAlign: 'justify', fontSize: "1rem", padding: "10px" }}
-                            onDoubleClick={() => {
-                                setEdit(true);
-                                setEditObject(item);
-                            }}
-                        >
-                            {edit && editObject?.id === item.id ? (
-                                <input
-                                    type="text"
-                                    value={editObject.description}
-                                    name="description"
-                                    onChange={(e) => handleInput(e.target.value, e.target.name)}
-                                />
-                            ) : (
-                                item.description
-                            )}
-                        </div>
-                        {edit && editObject?.id === item.id ? (
-                            <div onClick={handleSaveEdit}
-                            style={{
-                                width: '40%',
-                                margin: "auto",
-                                padding: "5px",
-                                position: "relative",
-                                border: "0.5 solid grey",
-                                borderRadius: "5px",
-                                background:"black",
-                                color: "lightGrey",
-                                textAlign:'center'
-                            }}>Save</div>
-                        ) : (
-                            <div style={{display:"flex"}}>
+                    />
+                </div>
+
+                {/* Tasks List */}
+                <div style={{ display: "flex", flexWrap: "wrap", gap: "20px", justifyContent: "center" }}>
+                    {tasks.items.length > 0 ? (
+                        tasks.items.map((item, index) => (
                             <div
-                                onClick={() => handleChangeStatus(item.id, item)}
+                                key={index}
                                 style={{
-                                    width: '40%',
-                                    margin: "auto",
-                                    padding: "5px",
-                                    position: "relative",
-                                    border: "0.5 solid grey",
-                                    borderRadius: "5px",
-                                    background: `${item.isCompleted ? "green" : "orange"}`,
-                                    color: "lightGrey"
+                                    width: "250px",
+                                    height: "350px",
+                                    border: "1px solid #ccc",
+                                    borderRadius: "12px",
+                                    backgroundColor: "#f0f8ff",
+                                    boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+                                    padding: "15px",
+                                    textAlign: "center",
                                 }}
                             >
-                                {item.isCompleted ? "Completed" : "In progress"}
+                                <div
+                                    style={{ fontSize: "1.5rem", fontWeight: "bold", cursor: "pointer" }}
+                                    onDoubleClick={() => {
+                                        setEdit(true);
+                                        setEditObject(item);
+                                    }}
+                                >
+                                    {edit && editObject?.id === item.id ? (
+                                        <input
+                                            type="text"
+                                            value={editObject.title}
+                                            name="title"
+                                            onChange={(e) => handleInput(e.target.value, e.target.name)}
+                                            style={{
+                                                width: "100%",
+                                                padding: "5px",
+                                                fontSize: "1rem",
+                                                border: "1px solid #ccc",
+                                                borderRadius: "5px",
+                                                marginBottom: "10px",
+                                            }}
+                                        />
+                                    ) : (
+                                        item.title
+                                    )}
+                                </div>
+                                <div
+                                    style={{
+                                        fontSize: "1rem",
+                                        padding: "10px",
+                                        cursor: "pointer",
+                                    }}
+                                    onDoubleClick={() => {
+                                        setEdit(true);
+                                        setEditObject(item);
+                                    }}
+                                >
+                                    {edit && editObject?.id === item.id ? (
+                                        <input
+                                            type="text"
+                                            value={editObject.description}
+                                            name="description"
+                                            onChange={(e) => handleInput(e.target.value, e.target.name)}
+                                            style={{
+                                                width: "100%",
+                                                padding: "5px",
+                                                fontSize: "1rem",
+                                                border: "1px solid #ccc",
+                                                borderRadius: "5px",
+                                            }}
+                                        />
+                                    ) : (
+                                        item.description
+                                    )}
+                                </div>
+
+                                {/* Buttons: Save, Status, Delete */}
+                                {edit && editObject?.id === item.id ? (
+                                    <div
+                                        onClick={handleSaveEdit}
+                                        style={{
+                                            padding: "8px",
+                                            marginTop: "10px",
+                                            borderRadius: "5px",
+                                            backgroundColor: "black",
+                                            color: "lightgrey",
+                                            cursor: "pointer",
+                                            fontWeight: "bold",
+                                        }}
+                                    >
+                                        Save
+                                    </div>
+                                ) : (
+                                    <div style={{ display: "flex", justifyContent: "space-between", marginTop: "10px" }}>
+                                        <div
+                                            onClick={() => handleChangeStatus(item.id, item)}
+                                            style={{
+                                                padding: "8px",
+                                                backgroundColor: item.isCompleted ? "green" : "orange",
+                                                color: "white",
+                                                borderRadius: "5px",
+                                                cursor: "pointer",
+                                                width: "45%",
+                                            }}
+                                        >
+                                            {item.isCompleted ? "Completed" : "In progress"}
+                                        </div>
+                                        <div
+                                            onClick={() => handleDelete(item.id)}
+                                            style={{
+                                                padding: "8px",
+                                                backgroundColor: "red",
+                                                color: "white",
+                                                borderRadius: "5px",
+                                                cursor: "pointer",
+                                                width: "45%",
+                                            }}
+                                        >
+                                            Delete
+                                        </div>
+                                    </div>
+                                )}
                             </div>
-                                 <div
-                                 onClick={() => handleDelete(item.id)}
-                                 style={{
-                                     width: '40%',
-                                     margin: "auto",
-                                     padding: "5px",
-                                     position: "relative",
-                                     border: "0.5 solid grey",
-                                     borderRadius: "5px",
-                                     background:"red",
-                                     color: "lightGrey"
-                                 }}
-                             >
-                                {'Delete'}
-                             </div>
-                             </div>
-                        )}
-                    </div>
-                ))}</>) : (
-                    <div
-                        style={{
-                            display: "table-cell",
-                            padding: "10px",
-                            color: "#888",
-                            fontStyle: "italic"
-                        }}
-                        onClick={()=>setIsOpen(true)}
-                    >
-                        No Tasks found. Add new item
-                    </div>
-                )}
-                <div        style={{ padding: "5px",
-                                     height:"20px",
-                                     border: "0.5 solid grey",
-                                     borderRadius: "5px",
-                                     color:"blue",
-                                     backgroundColor:"brown"}}                 onClick={()=>setIsOpen(true)}
+                        ))
+                    ) : (
+                        <div
+                            style={{
+                                fontSize: "1rem",
+                                color: "#888",
+                                fontStyle: "italic",
+                                cursor: "pointer",
+                            }}
+                            onClick={() => setIsOpen(true)}
+                        >
+                            No Tasks found. Add a new task.
+                        </div>
+                    )}
+                </div>
+
+                {/* Add Task Button */}
+                <div
+                    style={{
+                        padding: "10px 20px",
+                        backgroundColor: "#28a745",
+                        color: "white",
+                        fontWeight: "bold",
+                        borderRadius: "5px",
+                        cursor: "pointer",
+                        marginTop: "20px",
+                    }}
+                    onClick={() => setIsOpen(true)}
                 >
-                      {" ADD TASK"}
-                       </div>
-                       <button
+                    Add Task
+                </div>
+
+                {/* Pagination */}
+                <div style={{ marginTop: "20px", display: "flex", justifyContent: "center", gap: "10px" }}>
+                    <button
                         onClick={() => loadPage(pageIndex - 1)}
                         disabled={!tasks.hasPreviousPage}
-                       >
-                        Previous page
-                       </button>
-                       <button
+                        style={{
+                            padding: "8px 15px",
+                            backgroundColor: "#007bff",
+                            color: "white",
+                            border: "none",
+                            borderRadius: "5px",
+                            cursor: "pointer",
+                        }}
+                    >
+                        Previous
+                    </button>
+                    <button
                         onClick={() => loadPage(pageIndex + 1)}
                         disabled={!tasks.hasNextPage}
-                       >
-                        Next page
-                       </button>
-                       <input
-                       onChange={e => handleSearch(e.target.value)}
-                       description="Search"
-                       ></input>
-                       </>
-            
-         
-        </div>
-       
-       {isOpen && <AddTask  handleAddItem={handleAddItem} setIsOpen={setIsOpen}/>}
+                        style={{
+                            padding: "8px 15px",
+                            backgroundColor: "#007bff",
+                            color: "white",
+                            border: "none",
+                            borderRadius: "5px",
+                            cursor: "pointer",
+                        }}
+                    >
+                        Next
+                    </button>
+                </div>
+            </div>
+
+            {isOpen && <AddTask handleAddItem={handleAddItem} setIsOpen={setIsOpen} />}
         </>
     );
 };
