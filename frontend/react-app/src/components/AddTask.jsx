@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+// This component provides a modal to add a new task with a title and description.
+// It includes a form for task input and buttons to save or cancel the task creation.
 const AddTask = ({ handleAddItem, setIsOpen }) => {
     const [newTask, setNewTask] = useState({ title: "", description: "" });
 
@@ -13,8 +15,8 @@ const AddTask = ({ handleAddItem, setIsOpen }) => {
             alert("Both Title and Description are required!");
             return;
         }else{
-            handleAddItem(newTask); // Call the method from TasksList
-            setIsOpen(false); // Close the modal
+            handleAddItem(newTask);
+            setIsOpen(false); 
         }
      
     };

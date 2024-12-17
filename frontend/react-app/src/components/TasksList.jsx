@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
 import AddTask from "./AddTask.jsx";
 
+// The TasksList component is responsible for displaying, managing, and interacting with a list of tasks.
+// It supports features like searching, editing, deleting, changing task status, adding new tasks, and paginating through the list of tasks.
 const TasksList = () => {
     const [tasks, setTasks] = useState({
         items: [],

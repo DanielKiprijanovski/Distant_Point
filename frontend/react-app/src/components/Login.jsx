@@ -2,11 +2,13 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+// Login component that handles user authentication
 const Login = ({ handleLogin }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
+// Function to handle form submission
   const handleSubmit = async (e) => {
     setError(false);
     e.preventDefault();
