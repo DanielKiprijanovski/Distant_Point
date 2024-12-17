@@ -1,5 +1,6 @@
 # Task Management System - Frontend
-  This project was bootstrapped with Create React App and serves as the frontend for the Task Management System; it allows users to manage tasks with a clean UI, supports CRUD operations, and integrates seamlessly with the backend API.
+  This project was initialized using [Create React App](https://github.com/facebook/create-react-app), providing a fast and efficient setup for the frontend of the Task Management System. It allows users to perform CRUD operations on tasks and is fully integrated with the backend API for seamless functionality.
+
 
 ## Features
   Task Management: List, search, create, update, and delete tasks.
