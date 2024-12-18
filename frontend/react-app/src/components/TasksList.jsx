@@ -23,6 +23,9 @@ const TasksList = () => {
     const [editObject, setEditObject] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
 
+    const BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
+
     function loadPage(newPageIndex) {
         setPageIndex(newPageIndex);
         setReload(true);
@@ -42,7 +45,7 @@ const TasksList = () => {
                     Navigate("/login");
                 } else {
                     try {
-                        const response = await Axios.get("https://localhost:7256/api/taskitems", {
+                        const response = await Axios.get(`${BASE_URL}/api/taskitems`, {
                             headers: { Authorization: `Bearer ${token}` },
                             params: {
                                 search,
@@ -66,7 +69,7 @@ const TasksList = () => {
         const tempTask = { ...task, isCompleted: !task.isCompleted };
         try {
             await Axios.put(
-                `https://localhost:7256/api/taskitems/${id}`,
+                `${BASE_URL}/api/taskitems/${id}`,
                 tempTask,
                 {
                     headers: { Authorization: `Bearer ${token}` },
@@ -87,7 +90,7 @@ const TasksList = () => {
         const token = localStorage.getItem("token");
         try {
             await Axios.put(
-                `https://localhost:7256/api/taskitems/${editObject.id}`,
+                `${BASE_URL}/api/taskitems/${editObject.id}`,
                 editObject,
                 {
                     headers: { Authorization: `Bearer ${token}` },
@@ -104,7 +107,7 @@ const TasksList = () => {
         const token = localStorage.getItem("token");
         try {
             await Axios.delete(
-                `https://localhost:7256/api/taskitems/${id}`,
+                `${BASE_URL}/api/taskitems/${id}`,
                 {
                     headers: { Authorization: `Bearer ${token}` },
                 }
@@ -124,7 +127,7 @@ const TasksList = () => {
         const token = localStorage.getItem("token");
         try {
             await Axios.post(
-                `https://localhost:7256/api/taskitems`,
+                `${BASE_URL}/api/taskitems`,
                 item,
                 {
                     headers: { Authorization: `Bearer ${token}` },

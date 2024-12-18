@@ -37,7 +37,7 @@ namespace TMS.Repositories.Repositories
         }
 
 
-        public TaskItem GetTaskById(int id)
+        public TaskItem? GetTaskById(int id)
         {
             return _context.TaskItems.Find(id);
         }

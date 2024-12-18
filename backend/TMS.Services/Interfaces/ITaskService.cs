@@ -11,7 +11,7 @@ namespace TMS.Services.Interfaces
     public interface ITaskService
     {
         PaginatedList<TaskItem> GetAllTasks(int pageIndex, int pageSize, string search);
-        TaskItem GetTaskById(int id);
+        TaskItem? GetTaskById(int id);
         void CreateTask(TaskItem task);
         void UpdateTask(TaskItem task);
         void DeleteTask(int id);

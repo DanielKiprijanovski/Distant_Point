@@ -11,7 +11,7 @@ namespace TMS.Repositories.Interfaces
     public interface ITaskRepository
     {
         PaginatedList<TaskItem> GetAllTasks(int pageIndex, int pageSize, string search);
-        TaskItem GetTaskById(int id);
+        TaskItem? GetTaskById(int id);
         void AddTask(TaskItem taskItem);
         void UpdateTask(TaskItem taskItem);
         void DeleteTask(int id);
